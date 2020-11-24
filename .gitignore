@@ -1,0 +1,6 @@
+!data/cache/.gitkeep
+.vagrant/
+/composer.lock
+/phpunit.xml
+/vendor/
+data/cache/*
