@@ -46,4 +46,9 @@ return [
             __DIR__ . '/../view',
         ],
     ],
+    'service_manager' => [
+        'factories' => [
+            \Application\Hydrator\CollectionExtract::class => \Application\Hydrator\CollectionExtractFactory::class,
+        ]
+    ]
 ];

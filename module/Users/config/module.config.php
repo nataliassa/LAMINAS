@@ -121,10 +121,6 @@ return [
         ],
     ],
     'api-tools-hal' => [
-        \Doctrine\ORM\PersistentCollection::class => [
-            'hydrator' => 'ArraySerializable',
-            'isCollection' => true,
-        ],
         'metadata_map' => [
             \Users\V1\Entity\User::class => [
                 'route_identifier_name' => 'user_id',
@@ -169,7 +165,9 @@ return [
             'entity_class' => \Users\V1\Entity\User::class,
             'object_manager' => 'doctrine.entitymanager.orm_default',
             'by_value' => true,
-            'strategies' => [],
+            'strategies' => [
+                 'emails' =>  Application\Hydrator\CollectionExtract::class
+            ],
             'use_generated_hydrator' => true,
         ],
         'Users\\V1\\Rest\\Email\\EmailsHydrator' => [
@@ -241,5 +239,5 @@ return [
                 ],
             ],
         ],
-    ],
+    ]
 ];
