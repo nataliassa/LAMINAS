@@ -37,7 +37,7 @@ class User
 
     /**
      * @var Email
-     * @ORM\OneToMany(targetEntity="Users\V1\Entity\Email", mappedBy="userId", cascade={"persist", "remove"}, orphanRemoval=true, indexBy="emailId"))
+     * @ORM\OneToMany(targetEntity="Users\V1\Entity\Email", mappedBy="userId", cascade={"persist", "remove"}, orphanRemoval=true, indexBy="emailId")
      */
     private $emails;
 
